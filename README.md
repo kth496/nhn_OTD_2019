@@ -1,82 +1,83 @@
-###### gcc 8.1.0 ¿¡¼­ Å×½ºÆ® ¿Ï·á
+###### gcc 8.1.0 ì—ì„œ í…ŒìŠ¤íŠ¸ ì™„ë£Œ
 
-### ¹®Á¦ Ç®ÀÌ ´Ü°è
+## ë¬¸ì œ í’€ì´ ë‹¨ê³„
 
-##### 1. ÁÖ¾îÁø ÁÂÇ¥, ¹ÝÁö¸§ Á¤º¸¸¦ ¹ÙÅÁÀ¸·Î ¿ø °£ÀÇ °ü°è¸¦ Æ®¸® or ±×·¡ÇÁ ±¸Á¶·Î º¯È¯
+##### 1. ì£¼ì–´ì§„ ì¢Œí‘œ, ë°˜ì§€ë¦„ ì •ë³´ë¥¼ ë°”íƒ•ìœ¼ë¡œ ì› ê°„ì˜ ê´€ê³„ë¥¼ íŠ¸ë¦¬ or ê·¸ëž˜í”„ êµ¬ì¡°ë¡œ ë³€í™˜
 
-##### 2. ¸¸µé¾îÁø ±¸Á¶¿¡¼­ ¿ø°ú ¿ø »çÀÌÀÇ ÃÖ´Ü °æ·Î¸¦ ±¸ÇÔ
+##### 2. ë§Œë“¤ì–´ì§„ êµ¬ì¡°ì—ì„œ ì›ê³¼ ì› ì‚¬ì´ì˜ ìµœë‹¨ ê²½ë¡œë¥¼ êµ¬í•¨
 
-Ç®ÀÌ ÃÊ±â¿¡´Â ¸ðµç °£¼±¿¡ °¡ÁßÄ¡¸¦ 1·Î ¼³Á¤ÇÑ ¹«Çâ ±×·¡ÇÁ¸¦ ±¸¼ºÇÏ¿© ´ÙÀÍ½ºÆ®¶ó ¾Ë°í¸®ÁòÀ¸·Î ÇØ°áÇÏ·Á Çß½À´Ï´Ù. ÇÏÁö¸¸ °¡ÁßÄ¡°¡ ÀüºÎ 1ÀÌ¶ó´Â°Ç ÀÖÀ¸³ª ¸¶³ªÇÑ Á¶°ÇÀÌ±âµµÇÏ°í, °áÁ¤ÀûÀ¸·Î ÀÌ ¹®Á¦´Â **°æ·Î**¸¦ ³²°Ü¾ß ÇÏ±â¶§¹®¿¡ ¼±È¸Çß½À´Ï´Ù.
+í’€ì´ ì´ˆê¸°ì—ëŠ” ëª¨ë“  ê°„ì„ ì— ê°€ì¤‘ì¹˜ë¥¼ 1ë¡œ ì„¤ì •í•œ ë¬´í–¥ ê·¸ëž˜í”„ë¥¼ êµ¬ì„±í•˜ì—¬ ë‹¤ìµìŠ¤íŠ¸ë¼ ì•Œê³ ë¦¬ì¦˜ìœ¼ë¡œ í•´ê²°í•˜ë ¤ í–ˆìŠµë‹ˆë‹¤. í•˜ì§€ë§Œ ê°€ì¤‘ì¹˜ê°€ ì „ë¶€ 1ì´ë¼ëŠ”ê±´ ìžˆìœ¼ë‚˜ ë§ˆë‚˜í•œ ì¡°ê±´ì´ê¸°ë„í•˜ê³ , ê²°ì •ì ìœ¼ë¡œ ì´ ë¬¸ì œëŠ” **ê²½ë¡œ**ë¥¼ ë‚¨ê²¨ì•¼ í•˜ê¸°ë•Œë¬¸ì— ì„ íšŒí–ˆìŠµë‹ˆë‹¤.
 
-¹®Á¦ Á¶°ÇÀÌ ³Ë³ËÇÏ¿© Àç±ÍÇÔ¼ö¸¦ ÀÌ¿ëÇÑ DFS·Î ±¸ÇöÇØµµ ¿À¹öÇÃ·Î¿ì°¡ ¹ß»ýÇÏÁö ¾ÊÀ» °ÍÀ¸·Î ¿¹»óµË´Ï´Ù.
+ë¬¸ì œ ì¡°ê±´ì´ ë„‰ë„‰í•˜ì—¬ ìž¬ê·€í•¨ìˆ˜ë¥¼ ì´ìš©í•œ DFSë¡œ êµ¬í˜„í•´ë„ ì˜¤ë²„í”Œë¡œìš°ê°€ ë°œìƒí•˜ì§€ ì•Šì„ ê²ƒìœ¼ë¡œ ì˜ˆìƒë©ë‹ˆë‹¤.
 
-½Ã°£º¹Àâµµ´Â **O(N<sup>2</sup>)** ÀÔ´Ï´Ù.
+ì‹œê°„ë³µìž¡ë„ëŠ” **O(N<sup>2</sup>)** ìž…ë‹ˆë‹¤.
 
-### Ç¥Çö¹æ¹ý ¹× º¯¼ö ¼³¸í
+## í‘œí˜„ë°©ë²• ë° ë³€ìˆ˜ ì„¤ëª…
 
-1. `Æ÷ÇÔ°ü°è`
-   ¸¸¾à **¿ø A**°¡ **¿ø B**¿¡ ¿ÏÀüÈ÷ Æ÷ÇÔµÇ¾î ÀÖÀ¸¸é, **¿ø A**ÀÇ »óÀ§ ¿øÀº **¿ø B**°¡ µÈ´Ù°í Á¤ÀÇÇÒ ¼ö ÀÖ½À´Ï´Ù. »óÀ§ ¿øÀº ¸î °ãÀÌ Á¸ÀçÇÏµç °¡Àå **¸¶Áö¸·**À¸·Î ÀÚ½ÅÀ» Æ÷ÇÔÇÑ °ÍÀ¸·Î Á¤ÇÕ´Ï´Ù. ¿¹¸¦ µé¾î ¹®Á¦¿¡¼­ ÁÖ¾îÁø ±×¸²¿¡ µû¸£¸é **¿ø 11**Àº »óÀ§ ¿øÀ¸·Î **¿ø 10**À» °¡Áý´Ï´Ù.
+1. `í¬í•¨ê´€ê³„`
+   ë§Œì•½ **ì› A**ê°€ **ì› B**ì— ì™„ì „ížˆ í¬í•¨ë˜ì–´ ìžˆìœ¼ë©´, **ì› A**ì˜ ìƒìœ„ ì›ì€ **ì› B**ê°€ ëœë‹¤ê³  ì •ì˜í•  ìˆ˜ ìžˆìŠµë‹ˆë‹¤. ìƒìœ„ ì›ì€ ëª‡ ê²¹ì´ ì¡´ìž¬í•˜ë“  ê°€ìž¥ **ë§ˆì§€ë§‰**ìœ¼ë¡œ ìžì‹ ì„ í¬í•¨í•œ ê²ƒìœ¼ë¡œ ì •í•©ë‹ˆë‹¤. ì˜ˆë¥¼ ë“¤ì–´ ë¬¸ì œì—ì„œ ì£¼ì–´ì§„ ê·¸ë¦¼ì— ë”°ë¥´ë©´ **ì› 11**ì€ ìƒìœ„ ì›ìœ¼ë¡œ **ì› 10**ì„ ê°€ì§‘ë‹ˆë‹¤.
 
 2. `vector<tuple<int,int>> me_par_relation`
-   (»óÀ§ ¿ø ¹øÈ£, »óÀ§ ¿ø ¹ÝÁö¸§) ÇüÅÂÀÇ Æ©ÇÃÀ» °¡Áø º¤ÅÍÀÔ´Ï´Ù. ÀÌ º¤ÅÍ´Â ¾î¶°ÇÑ ¿øÀÇ »óÀ§ ¿ø Á¤º¸¸¦ ´ã°í ÀÖ½À´Ï´Ù. ¿¹¸¦ µé¾î **¿ø 11**ÀÇ »óÀ§ ¿øÀº **¿ø 10**ÀÌ¸ç, ÀÌ¶§ **¿ø 10**ÀÇ ¹ÝÁö¸§Àº 7ÀÔ´Ï´Ù. µû¶ó¼­ ´ÙÀ½°ú °°ÀÌ °ªÀÌ ÀúÀåµË´Ï´Ù.
+   (ìƒìœ„ ì› ë²ˆí˜¸, ìƒìœ„ ì› ë°˜ì§€ë¦„) í˜•íƒœì˜ íŠœí”Œì„ ê°€ì§„ ë²¡í„°ìž…ë‹ˆë‹¤. ì´ ë²¡í„°ëŠ” ì–´ë– í•œ ì›ì˜ ìƒìœ„ ì› ì •ë³´ë¥¼ ë‹´ê³  ìžˆìŠµë‹ˆë‹¤. ì˜ˆë¥¼ ë“¤ì–´ **ì› 11**ì˜ ìƒìœ„ ì›ì€ **ì› 10**ì´ë©°, ì´ë•Œ **ì› 10**ì˜ ë°˜ì§€ë¦„ì€ 7ìž…ë‹ˆë‹¤. ë”°ë¼ì„œ ë‹¤ìŒê³¼ ê°™ì´ ê°’ì´ ì €ìž¥ë©ë‹ˆë‹¤.
 
 ```c++
 me_par_relation[11] = make_tuple(10,7);
 ```
 
-¹®Á¦ Á¶°ÇÀ» °í·ÁÇÏ¿© ÃÑ ±æÀÌ 101, ¸ðµç ¿ø¼Ò´Â (0,10000) À¸·Î ÃÊ±âÈ­ÇÏ¿© »ç¿ëÇÕ´Ï´Ù.
+ë¬¸ì œ ì¡°ê±´ì„ ê³ ë ¤í•˜ì—¬ ì´ ê¸¸ì´ 101, ëª¨ë“  ì›ì†ŒëŠ” (0,10000) ìœ¼ë¡œ ì´ˆê¸°í™”í•˜ì—¬ ì‚¬ìš©í•©ë‹ˆë‹¤.
 
 3. `vector<tuple<int, int, int, int>> node`
-   (¿ø ¹øÈ£, X ÁÂÇ¥, Y ÁÂÇ¥, ¹ÝÁö¸§) ÇüÅÂÀÇ Æ©ÇÃÀ» °¡Áø º¤ÅÍÀÔ´Ï´Ù. ¼­·Î °ãÄ¡Áö ¾Ê´Â´Ù´Â°ÍÀÌ °ËÁõµÈ ¸ðµç ¿øÀÇ Á¤º¸¸¦ ´ã°í ÀÖ½À´Ï´Ù.
+   (ì› ë²ˆí˜¸, X ì¢Œí‘œ, Y ì¢Œí‘œ, ë°˜ì§€ë¦„) í˜•íƒœì˜ íŠœí”Œì„ ê°€ì§„ ë²¡í„°ìž…ë‹ˆë‹¤. ì„œë¡œ ê²¹ì¹˜ì§€ ì•ŠëŠ”ë‹¤ëŠ”ê²ƒì´ ê²€ì¦ëœ ëª¨ë“  ì›ì˜ ì •ë³´ë¥¼ ë‹´ê³  ìžˆìŠµë‹ˆë‹¤.
 
 4. `int adj_mat[101][101]`
-   ¿ø°ú ¿ø »çÀÌÀÇ À§Ä¡ °ü°è¸¦ ³ªÅ¸³»´Â ÀÎÁ¢ Çà·Ä(Adjacency matrix)ÀÔ´Ï´Ù. **me_par_relation**ÀÇ Á¤º¸¸¦ ¹ÙÅÁÀ¸·Î °è»ê»ó ÆíÀÇ¸¦ À§ÇØ Çà·Ä·Î Àç±¸¼ºÇÏ¿© »ç¿ëÇÕ´Ï´Ù. ÇÁ·Î±×·¥ Àü¹Ý¿¡¼­ **map**ÀÌ¶ó´Â ¸Å°³º¯¼ö·Î È£ÃâµË´Ï´Ù.
+   ì›ê³¼ ì› ì‚¬ì´ì˜ ìœ„ì¹˜ ê´€ê³„ë¥¼ ë‚˜íƒ€ë‚´ëŠ” ì¸ì ‘ í–‰ë ¬(Adjacency matrix)ìž…ë‹ˆë‹¤. **me_par_relation**ì˜ ì •ë³´ë¥¼ ë°”íƒ•ìœ¼ë¡œ ê³„ì‚°ìƒ íŽ¸ì˜ë¥¼ ìœ„í•´ í–‰ë ¬ë¡œ ìž¬êµ¬ì„±í•˜ì—¬ ì‚¬ìš©í•©ë‹ˆë‹¤. í”„ë¡œê·¸ëž¨ ì „ë°˜ì—ì„œ **map**ì´ë¼ëŠ” ë§¤ê°œë³€ìˆ˜ë¡œ í˜¸ì¶œë©ë‹ˆë‹¤.
 
-### ÇÔ¼ö ±â´É ¼³¸í
+### í•¨ìˆ˜ ê¸°ëŠ¥ ì„¤ëª…
 
-1.  **bool validation**
-    ¸Å°³º¯¼ö·Î `vector<tuple<int, int>> &me_par_relation` `vector<tuple<int, int, int, int>> node` `tuple<int, int, int, int> newone)` 3°³¸¦ °¡Áý´Ï´Ù. À§¿¡¼­ ¾ð±ÞÇÑ º¯¼ö µÎ °¡Áö¸¦ ¹Þ½À´Ï´Ù. Ãß°¡ÀûÀ¸·Î ¹Þ°íÀÖ´Â **newone**Àº »õ·Ó°Ô ÀÔ·Â¹Þ´Â ¿øÀÇ Á¤º¸ ÀÔ´Ï´Ù. ÀÌ ÇÔ¼ö´Â Á¸ÀçÇÏ´Â **me_par_relation**°ú **node** Á¤º¸¸¦ ¹ÙÅÁÀ¸·Î, »õ·Î ÀÔ·Â¹Þ´Â ¿øÀÇ Á¤º¸¿Í ´ëÁ¶ÇÏ¿© À¯È¿ÇÑ °ÍÀÎÁö ÆÇ´ÜÇÏ¿© **bool** ÀÚ·áÇüÀ» ¹ÝÈ¯ÇÕ´Ï´Ù. À¯È¿ÇÏ´Ù¸é **true**¸¦ ¹ÝÈ¯ÇÏ¸ç, ÀÌ¿Í ´õºÒ¾î **me_par_relation** ¿¡ »õ·Î¿î ¿øÀÇ »óÀ§ ¿ø Á¤º¸¸¦ ±â·ÏÇÕ´Ï´Ù.
+#### 1. **bool validation**
 
-        [µÎ ¿øÀÇ À§Ä¡ °ü°è](https://doubleroot.in/lessons/circle/relative-postion-of-two-circles/)¸¦ ¹ÙÅÁÀ¸·Î µÎ ¿øÀÌ ¼­·Î °ãÄ¡´ÂÁö ¾Æ´ÑÁö ÆÇ´ÜÇÒ ¼ö ÀÖ½À´Ï´Ù. °ãÄ¡Áö ¾Ê´Â´Ù¸é ÀÌ¸¦ **À¯È¿**ÇÏ´Ù°í Á¤ÀÇÇÕ´Ï´Ù. **À¯È¿**ÇÑ ¿øÀº ¹Ýµå½Ã »óÀ§ ¿øÀ» °¡Áý´Ï´Ù. µÎ ¿ø »çÀÌÀÇ Æ÷ÇÔ°ü°è ¿ª½Ã µÎ ¿øÀÇ À§Ä¡ °ü°è¿¡¼­ ¾òÀ» ¼ö ÀÖ½À´Ï´Ù. °£´ÜÈ÷ ¿ä¾àÇÏ¸é ¿ì¸®ÀÇ ÇÁ·Î±×·¥¿¡¼­´Â *µÎ ¿øÀÇ Áß½É »çÀÌÀÇ °Å¸®*¸¦ `float ed` ÇÔ¼ö¸¦ ÅëÇØ ±¸ÇÕ´Ï´Ù. ÀÌ¿Í ´õºÒ¾î *µÎ ¿øÀÇ ¹ÝÁö¸§À» ´õÇÑ °ª*°ú *µÎ ¿øÀÇ ¹ÝÁö¸§À» »« °ª* ±îÁö ÃÑ 3°³ÀÇ °ªÀ» È°¿ëÇØ µÎ ¿øÀÇ Æ÷ÇÔ°ü°è¸¦ ÆÄ¾ÇÇÕ´Ï´Ù.
+ë§¤ê°œë³€ìˆ˜ë¡œ `vector<tuple<int, int>> &me_par_relation` `vector<tuple<int, int, int, int>> node` `tuple<int, int, int, int> newone)` 3ê°œë¥¼ ê°€ì§‘ë‹ˆë‹¤. ìœ„ì—ì„œ ì–¸ê¸‰í•œ ë³€ìˆ˜ ë‘ ê°€ì§€ë¥¼ ë°›ìŠµë‹ˆë‹¤. ì¶”ê°€ì ìœ¼ë¡œ ë°›ê³ ìžˆëŠ” **newone**ì€ ìƒˆë¡­ê²Œ ìž…ë ¥ë°›ëŠ” ì›ì˜ ì •ë³´ ìž…ë‹ˆë‹¤. ì´ í•¨ìˆ˜ëŠ” ì¡´ìž¬í•˜ëŠ” **me_par_relation**ê³¼ **node** ì •ë³´ë¥¼ ë°”íƒ•ìœ¼ë¡œ, ìƒˆë¡œ ìž…ë ¥ë°›ëŠ” ì›ì˜ ì •ë³´ì™€ ëŒ€ì¡°í•˜ì—¬ ìœ íš¨í•œ ê²ƒì¸ì§€ íŒë‹¨í•˜ì—¬ **bool** ìžë£Œí˜•ì„ ë°˜í™˜í•©ë‹ˆë‹¤. ìœ íš¨í•˜ë‹¤ë©´ **true**ë¥¼ ë°˜í™˜í•˜ë©°, ì´ì™€ ë”ë¶ˆì–´ **me_par_relation** ì— ìƒˆë¡œìš´ ì›ì˜ ìƒìœ„ ì› ì •ë³´ë¥¼ ê¸°ë¡í•©ë‹ˆë‹¤.
 
-        **À¯È¿**ÇÑ »óÈ²Àº Å©°Ô 3°¡Áö ÄÉÀÌ½º·Î ³ª´¹´Ï´Ù.
+[ë‘ ì›ì˜ ìœ„ì¹˜ ê´€ê³„](https://doubleroot.in/lessons/circle/relative-postion-of-two-circles/)ë¥¼ ë°”íƒ•ìœ¼ë¡œ ë‘ ì›ì´ ì„œë¡œ ê²¹ì¹˜ëŠ”ì§€ ì•„ë‹Œì§€ íŒë‹¨í•  ìˆ˜ ìžˆìŠµë‹ˆë‹¤. ê²¹ì¹˜ì§€ ì•ŠëŠ”ë‹¤ë©´ ì´ë¥¼ **ìœ íš¨**í•˜ë‹¤ê³  ì •ì˜í•©ë‹ˆë‹¤. **ìœ íš¨**í•œ ì›ì€ ë°˜ë“œì‹œ ìƒìœ„ ì›ì„ ê°€ì§‘ë‹ˆë‹¤. ë‘ ì› ì‚¬ì´ì˜ í¬í•¨ê´€ê³„ ì—­ì‹œ ë‘ ì›ì˜ ìœ„ì¹˜ ê´€ê³„ì—ì„œ ì–»ì„ ìˆ˜ ìžˆìŠµë‹ˆë‹¤. ê°„ë‹¨ížˆ ìš”ì•½í•˜ë©´ ìš°ë¦¬ì˜ í”„ë¡œê·¸ëž¨ì—ì„œëŠ” *ë‘ ì›ì˜ ì¤‘ì‹¬ ì‚¬ì´ì˜ ê±°ë¦¬*ë¥¼ `float ed` í•¨ìˆ˜ë¥¼ í†µí•´ êµ¬í•©ë‹ˆë‹¤. ì´ì™€ ë”ë¶ˆì–´ *ë‘ ì›ì˜ ë°˜ì§€ë¦„ì„ ë”í•œ ê°’*ê³¼ *ë‘ ì›ì˜ ë°˜ì§€ë¦„ì„ ëº€ ê°’* ê¹Œì§€ ì´ 3ê°œì˜ ê°’ì„ í™œìš©í•´ ë‘ ì›ì˜ í¬í•¨ê´€ê³„ë¥¼ íŒŒì•…í•©ë‹ˆë‹¤.
 
-        1. µÎ ¿øÀÌ ¼­·Î ¿ÏÀüÈ÷ ºÐ¸®µÇ¾î ÀÖÀ½.
-        2. »õ·Î¿î ¿øÀÌ ±âÁ¸ ¿øÀ» »óÀ§ ¿øÀ¸·Î °¡Áü.
-        	ÀÌ °æ¿ì¿£ `me_par_relation[»õ·Î¿î ¿ø] = (±âÁ¸ ¿ø ¹øÈ£, ±âÁ¸ ¿ø ¹ÝÁö¸§)` ÇüÅÂ·Î ¾÷µ¥ÀÌÆ® ÇÕ´Ï´Ù.
-        3. »õ·Î¿î ¿øÀÌ ±âÁ¸ ¿øÀÇ »óÀ§ ¿øÀÌ µÊ
-        	`me_par_relation[±âÁ¸ ¿ø]` À» È£ÃâÇØ ÀÌ¹Ì °¡Áö°í ÀÖ´Â »óÀ§ ¿øÀÇ ¹ÝÁö¸§°ú »õ·Î¿î ¿øÀÇ ¹ÝÁö¸§À» ºñ±³ÇÕ´Ï´Ù. »õ·Î¿î ¿øÀÌ ´õ ÀÛ´Ù¸é `me_par_relation[±âÁ¸ ¿ø] = (»õ·Î¿î ¿ø ¹øÈ£, »õ·Î¿î ¿ø ¹ÝÁö¸§)` ÇüÅÂ·Î ¾÷µ¥ÀÌÆ® ÇÕ´Ï´Ù.
+**ìœ íš¨**í•œ ìƒí™©ì€ í¬ê²Œ 3ê°€ì§€ ì¼€ì´ìŠ¤ë¡œ ë‚˜ë‰©ë‹ˆë‹¤.
+   1. ë‘ ì›ì´ ì„œë¡œ ì™„ì „ížˆ ë¶„ë¦¬ë˜ì–´ ìžˆìŒ.
+   2. ìƒˆë¡œìš´ ì›ì´ ê¸°ì¡´ ì›ì„ ìƒìœ„ ì›ìœ¼ë¡œ ê°€ì§. ì´ ê²½ìš°ì—” `me_par_relation[ìƒˆë¡œìš´ ì›] = (ê¸°ì¡´ ì› ë²ˆí˜¸, ê¸°ì¡´ ì› ë°˜ì§€ë¦„)` í˜•íƒœë¡œ ì—…ë°ì´íŠ¸ í•©ë‹ˆë‹¤.
+   3. ìƒˆë¡œìš´ ì›ì´ ê¸°ì¡´ ì›ì˜ ìƒìœ„ ì›ì´ ë¨. `me_par_relation[ê¸°ì¡´ ì›]` ì„ í˜¸ì¶œí•´ ì´ë¯¸ ê°€ì§€ê³  ìžˆëŠ” ìƒìœ„ ì›ì˜ ë°˜ì§€ë¦„ê³¼ ìƒˆë¡œìš´ ì›ì˜ ë°˜ì§€ë¦„ì„ ë¹„êµí•©ë‹ˆë‹¤. ìƒˆë¡œìš´ ì›ì´ ë” ìž‘ë‹¤ë©´ `me_par_relation[ê¸°ì¡´ ì›] = (ìƒˆë¡œìš´ ì› ë²ˆí˜¸, ìƒˆë¡œìš´ ì› ë°˜ì§€ë¦„)` í˜•íƒœë¡œ ì—…ë°ì´íŠ¸ í•©ë‹ˆë‹¤.
 
-2.  **void make_adj_matrix**
-    ¸Å°³º¯¼ö·Î `int N` `int (*map)[101]` `vector<tuple<int, int>> &me_par_relation` 3°³¸¦ °¡Áý´Ï´Ù.
 
-        `int N` : ¿øÀÇ °¹¼ö ÀÔ´Ï´Ù.
+#### 2. **void make_adj_matrix**
 
-        `int (*map)[101]` : ¿ø°ú ¿ø »çÀÌÀÇ ¿¬°á °ü°è¸¦ ³ªÅ¸³»´Â `map`ÀÇ Æ÷ÀÎÅÍ ÀÔ´Ï´Ù.
+ë§¤ê°œë³€ìˆ˜ë¡œ `int N` `int (*map)[101]` `vector<tuple<int, int>> &me_par_relation` 3ê°œë¥¼ ê°€ì§‘ë‹ˆë‹¤.
 
-        `vector<tuple<int,int>> &me_par_relation` : À§¿¡¼­ ¾ð±ÞÇÑ **me_par_relation**ÀÔ´Ï´Ù.
+`int N` : ì›ì˜ ê°¯ìˆ˜ ìž…ë‹ˆë‹¤.
 
-        **me_par_relation**ÀÇ ¸ðµç Á¤º¸¸¦ ¹ÙÅÁÀ¸·Î **map**ÀÇ °ªÀ» ¾÷µ¥ÀÌÆ®ÇÕ´Ï´Ù. **map**Àº ¸ðµç °ªÀÌ 0À¸·Î ÃÊ±âÈ­µÇ¾î ÀÖ½À´Ï´Ù. °ªÀÇ ¾÷µ¥ÀÌÆ® ¹æ¹ýÀº ¿¹¸¦ µé¾î, `me_par_relation[A]` ¸¦ È£ÃâÇÏ¿© `(B,R)`À» ¾ò¾ú´Ù°í °¡Á¤ÇØ º¾½Ã´Ù. ÀÌ´Â **¿ø A**ÀÇ »óÀ§ ¿øÀÌ **¿ø B**ÀÌ°í ¹ÝÁö¸§Àº **R**ÀÌ¶ó´Â °ÍÀ» ÀÇ¹ÌÇÕ´Ï´Ù. °£´ÜÈ÷ ¸»ÇÏ¸é **¿ø A**¿Í **¿ø B**°¡ ¼­·Î ¿¬°áµÇ¾î ÀÖ´Ù°í ÇÒ ¼ö ÀÖ½À´Ï´Ù. **map[A][B]** ¿Í **map[B][A]**ÀÇ °ªÀ» ¸ðµÎ 1·Î ¾÷µ¥ÀÌÆ®ÇÏ¸é ¿¬°á°ü°è¸¦ ³ªÅ¸³¾ ¼ö ÀÖ½À´Ï´Ù.
+`int (*map)[101]` : ì›ê³¼ ì› ì‚¬ì´ì˜ ì—°ê²° ê´€ê³„ë¥¼ ë‚˜íƒ€ë‚´ëŠ” `map`ì˜ í¬ì¸í„° ìž…ë‹ˆë‹¤.
 
-3.  **void findroute**
-    ¸Å°³º¯¼ö·Î `string *ans_str` `int *answer` `const int obj` `int past` `int cur_loc` `int length` `string route_info` `const int (*map)[101]` 8°³¸¦ °¡Áý´Ï´Ù.
+`vector<tuple<int,int>> &me_par_relation` : ìœ„ì—ì„œ ì–¸ê¸‰í•œ **me_par_relation**ìž…ë‹ˆë‹¤.
 
-        `string *ans_str` : Á¤´ä ¹®ÀÚ¿­ÀÇ Æ÷ÀÎÅÍÀÔ´Ï´Ù. ÇÔ¼ö°¡ ÀÛµ¿ÇÏ´Ù°¡ ¸ñÇ¥ÇÑ ¿ø¿¡ µµ´ÞÇÒ °æ¿ì ÀÌ Æ÷ÀÎÅÍ¸¦ ÅëÇØ Á¤´ä ¹®ÀÚ¿­¿¡ Á¢±ÙÇÏ¿© ¾÷µ¥ÀÌÆ® ÇÕ´Ï´Ù.
+**me_par_relation**ì˜ ëª¨ë“  ì •ë³´ë¥¼ ë°”íƒ•ìœ¼ë¡œ **map**ì˜ ê°’ì„ ì—…ë°ì´íŠ¸í•©ë‹ˆë‹¤. **map**ì€ ëª¨ë“  ê°’ì´ 0ìœ¼ë¡œ ì´ˆê¸°í™”ë˜ì–´ ìžˆìŠµë‹ˆë‹¤. ê°’ì˜ ì—…ë°ì´íŠ¸ ë°©ë²•ì€ ì˜ˆë¥¼ ë“¤ì–´, `me_par_relation[A]` ë¥¼ í˜¸ì¶œí•˜ì—¬ `(B,R)`ì„ ì–»ì—ˆë‹¤ê³  ê°€ì •í•´ ë´…ì‹œë‹¤. ì´ëŠ” **ì› A**ì˜ ìƒìœ„ ì›ì´ **ì› B**ì´ê³  ë°˜ì§€ë¦„ì€ **R**ì´ë¼ëŠ” ê²ƒì„ ì˜ë¯¸í•©ë‹ˆë‹¤. ê°„ë‹¨ížˆ ë§í•˜ë©´ **ì› A**ì™€ **ì› B**ê°€ ì„œë¡œ ì—°ê²°ë˜ì–´ ìžˆë‹¤ê³  í•  ìˆ˜ ìžˆìŠµë‹ˆë‹¤. **map[A][B]** ì™€ **map[B][A]**ì˜ ê°’ì„ ëª¨ë‘ 1ë¡œ ì—…ë°ì´íŠ¸í•˜ë©´ ì—°ê²°ê´€ê³„ë¥¼ ë‚˜íƒ€ë‚¼ ìˆ˜ ìžˆìŠµë‹ˆë‹¤.
 
-        `int *answer` : Á¤´ä¿¡ µµ´ÞÇÏ±â±îÁö ÀÌµ¿ÇÑ °Å¸®¸¦ °¡Áø °ªÀÇ Æ÷ÀÎÅÍÀÔ´Ï´Ù. »õ·Î¿î °æ·Î¸¦ Ã£¾Æ³»¸é ÀÌ °ª°ú ºñ±³ÇÏ¿© ´õ ÀÛÀº ÂÊÀ¸·Î ¾÷µ¥ÀÌÆ®ÇÏ±â À§ÇÑ ¿ëµµÀÔ´Ï´Ù.
+#### 3. **void findroute**
 
-        `const int obj` : µµÂø ¿øÀÇ ¹øÈ£ÀÔ´Ï´Ù.
+ë§¤ê°œë³€ìˆ˜ë¡œ `string *ans_str` `int *answer` `const int obj` `int past` `int cur_loc` `int length` `string route_info` `const int (*map)[101]` 8ê°œë¥¼ ê°€ì§‘ë‹ˆë‹¤.
 
-        `int past` : ÇöÀç À§Ä¡¿¡ ¿À±â ¹Ù·Î Á÷ÀüÀÇ ¿ø ¹øÈ£ ÀÔ´Ï´Ù. ÀÌ °ªÀÌ ¾øÀ¸¸é ¿Ô´ø ±æÀ» µÇµ¹¾Æ°¡´Â °æ¿ì°¡ »ý°Ü ¹«ÇÑ ·çÇÁ¿¡ ºüÁý´Ï´Ù.
+`string *ans_str` : ì •ë‹µ ë¬¸ìžì—´ì˜ í¬ì¸í„°ìž…ë‹ˆë‹¤. í•¨ìˆ˜ê°€ ìž‘ë™í•˜ë‹¤ê°€ ëª©í‘œí•œ ì›ì— ë„ë‹¬í•  ê²½ìš° ì´ í¬ì¸í„°ë¥¼ í†µí•´ ì •ë‹µ ë¬¸ìžì—´ì— ì ‘ê·¼í•˜ì—¬ ì—…ë°ì´íŠ¸ í•©ë‹ˆë‹¤.
 
-        `int cur_loc` : ÇöÀç À§Ä¡ÇÑ ¿øÀÇ ¹øÈ£¸¦ ³ªÅ¸³À´Ï´Ù.
+`int *answer` : ì •ë‹µì— ë„ë‹¬í•˜ê¸°ê¹Œì§€ ì´ë™í•œ ê±°ë¦¬ë¥¼ ê°€ì§„ ê°’ì˜ í¬ì¸í„°ìž…ë‹ˆë‹¤. ìƒˆë¡œìš´ ê²½ë¡œë¥¼ ì°¾ì•„ë‚´ë©´ ì´ ê°’ê³¼ ë¹„êµí•˜ì—¬ ë” ìž‘ì€ ìª½ìœ¼ë¡œ ì—…ë°ì´íŠ¸í•˜ê¸° ìœ„í•œ ìš©ë„ìž…ë‹ˆë‹¤.
 
-        `int length` : Ãâ¹ß ÁöÁ¡ºÎÅÍ ÇöÀç À§Ä¡ÀÇ ¿ø ±îÁö ÀÌµ¿ÇÑ °æ·ÎÀÇ ±æÀÌ¸¦ ³ªÅ¸³À´Ï´Ù.
+`const int obj` : ë„ì°© ì›ì˜ ë²ˆí˜¸ìž…ë‹ˆë‹¤.
 
-        `string route_info` : ÇöÀç±îÁö ÀÌµ¿ÇÑ °æ·Î¸¦ ¹®ÀÚ¿­·Î °¡Áö°í ÀÖ½À´Ï´Ù.
+`int past` : í˜„ìž¬ ìœ„ì¹˜ì— ì˜¤ê¸° ë°”ë¡œ ì§ì „ì˜ ì› ë²ˆí˜¸ ìž…ë‹ˆë‹¤. ì´ ê°’ì´ ì—†ìœ¼ë©´ ì™”ë˜ ê¸¸ì„ ë˜ëŒì•„ê°€ëŠ” ê²½ìš°ê°€ ìƒê²¨ ë¬´í•œ ë£¨í”„ì— ë¹ ì§‘ë‹ˆë‹¤.
 
-        `const (*map)[101]` : ¿ø°ú ¿ø »çÀÌÀÇ À§Ä¡ °ü°è¸¦ ³ªÅ¸³»´Â ÀÎÁ¢Çà·ÄÀÔ´Ï´Ù.
+`int cur_loc` : í˜„ìž¬ ìœ„ì¹˜í•œ ì›ì˜ ë²ˆí˜¸ë¥¼ ë‚˜íƒ€ëƒ…ë‹ˆë‹¤.
 
-        ÀÌ ÇÔ¼ö´Â Àç±ÍÇÔ¼öÀÔ´Ï´Ù. ÇÔ¼ö°¡ È£ÃâµÇ¸é °¡Àå ¸ÕÀú Çö À§Ä¡°¡ µµÂø ÁöÁ¡ÀÎÁö ÆÇ´ÜÇÕ´Ï´Ù. ¸¸¾à ±×·¸´Ù¸é ±×µ¿¾È °¡Áö°í ¿Â `length`¸¦ `answer`°ú ºñ±³ÇÕ´Ï´Ù. `length`°¡ ´õ ÀÛ´Ù¸é »õ·Î¿î ÃÖ´Ü°æ·Î¸¦ Ã£Àº °ÍÀÌ¹Ç·Î `string *ans_str*` À» `string route_info`·Î ¾÷µ¥ÀÌÆ® ÇÕ´Ï´Ù.
+`int length` : ì¶œë°œ ì§€ì ë¶€í„° í˜„ìž¬ ìœ„ì¹˜ì˜ ì› ê¹Œì§€ ì´ë™í•œ ê²½ë¡œì˜ ê¸¸ì´ë¥¼ ë‚˜íƒ€ëƒ…ë‹ˆë‹¤.
 
-        ÇöÀç À§Ä¡°¡ µµÂø ÁöÁ¡ÀÌ ¾Æ´Ï¶ó¸é `map`À» ¹ÙÅÁÀ¸·Î ÇöÀç ¿ø°ú ¿¬°áµÈ ¸ðµç ¿øÀ¸·Î ÀÌµ¿ÇÕ´Ï´Ù. ÀÌ¶§ `int past`¿Í µ¿ÀÏÇÑ °÷Àº ÀÌ¹Ì Áö³ª¿Â °÷ÀÌ¹Ç·Î ´Ù½Ã °¡Áö ¾Ê½À´Ï´Ù.  »õ·Ó°Ô °¥ °÷À» Á¤ÇÏ¸é `string route_info`¿¡ °¥ °÷ÀÇ °ªÀ» Ãß°¡ÇÏ¿© °æ·Î¸¦ ¾÷µ¥ÀÌÆ® ÇÕ´Ï´Ù. ÀÌÁ¦ ÀÌ ¸ðµç °ªÀ» ´Ù½Ã ÀÎÀÚ·Î Àü´ÞÇÏ¿© ÇÔ¼ö¸¦ Àç±ÍÀûÀ¸·Î È£ÃâÇÕ´Ï´Ù.
+`string route_info` : í˜„ìž¬ê¹Œì§€ ì´ë™í•œ ê²½ë¡œë¥¼ ë¬¸ìžì—´ë¡œ ê°€ì§€ê³  ìžˆìŠµë‹ˆë‹¤.
+
+`const (*map)[101]` : ì›ê³¼ ì› ì‚¬ì´ì˜ ìœ„ì¹˜ ê´€ê³„ë¥¼ ë‚˜íƒ€ë‚´ëŠ” ì¸ì ‘í–‰ë ¬ìž…ë‹ˆë‹¤.
+
+ì´ í•¨ìˆ˜ëŠ” ìž¬ê·€í•¨ìˆ˜ìž…ë‹ˆë‹¤. í•¨ìˆ˜ê°€ í˜¸ì¶œë˜ë©´ ê°€ìž¥ ë¨¼ì € í˜„ ìœ„ì¹˜ê°€ ë„ì°© ì§€ì ì¸ì§€ íŒë‹¨í•©ë‹ˆë‹¤. ë§Œì•½ ê·¸ë ‡ë‹¤ë©´ ê·¸ë™ì•ˆ ê°€ì§€ê³  ì˜¨ `length`ë¥¼ `answer`ê³¼ ë¹„êµí•©ë‹ˆë‹¤. `length`ê°€ ë” ìž‘ë‹¤ë©´ ìƒˆë¡œìš´ ìµœë‹¨ê²½ë¡œë¥¼ ì°¾ì€ ê²ƒì´ë¯€ë¡œ `string *ans_str*` ì„ `string route_info`ë¡œ ì—…ë°ì´íŠ¸ í•©ë‹ˆë‹¤.
+
+í˜„ìž¬ ìœ„ì¹˜ê°€ ë„ì°© ì§€ì ì´ ì•„ë‹ˆë¼ë©´ `map`ì„ ë°”íƒ•ìœ¼ë¡œ í˜„ìž¬ ì›ê³¼ ì—°ê²°ëœ ëª¨ë“  ì›ìœ¼ë¡œ ì´ë™í•©ë‹ˆë‹¤. ì´ë•Œ `int past`ì™€ ë™ì¼í•œ ê³³ì€ ì´ë¯¸ ì§€ë‚˜ì˜¨ ê³³ì´ë¯€ë¡œ ë‹¤ì‹œ ê°€ì§€ ì•ŠìŠµë‹ˆë‹¤.  ìƒˆë¡­ê²Œ ê°ˆ ê³³ì„ ì •í•˜ë©´ `string route_info`ì— ê°ˆ ê³³ì˜ ê°’ì„ ì¶”ê°€í•˜ì—¬ ê²½ë¡œë¥¼ ì—…ë°ì´íŠ¸ í•©ë‹ˆë‹¤. ì´ì œ ì´ ëª¨ë“  ê°’ì„ ë‹¤ì‹œ ì¸ìžë¡œ ì „ë‹¬í•˜ì—¬ í•¨ìˆ˜ë¥¼ ìž¬ê·€ì ìœ¼ë¡œ í˜¸ì¶œí•©ë‹ˆë‹¤.
